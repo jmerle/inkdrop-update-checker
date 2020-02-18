@@ -1,8 +1,8 @@
 {
-  "name": "hello-world",
+  "name": "update-checker",
   "version": "0.0.0",
-  "description": "Hello World plugin description",
-  "repository": "https://github.com/jmerle/inkdrop-hello-world",
+  "description": "Automatically check for Inkdrop plugin updates",
+  "repository": "https://github.com/jmerle/inkdrop-update-checker",
   "license": "MIT",
   "main": "./dist/index",
   "scripts": {
