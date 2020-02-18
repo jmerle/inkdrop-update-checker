@@ -1,0 +1,18 @@
+{
+  "menu": [
+    {
+      "label": "Plugins",
+      "submenu": [
+        {
+          "label": "Update Checker",
+          "submenu": [
+            {
+              "label": "Check for updates",
+              "command": "update-checker:check"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -16,7 +16,9 @@
     "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{less,yml,json}'",
     "release": "rimraf dist/ && yarn build && ipm publish"
   },
-  "dependencies": {},
+  "dependencies": {
+    "execa": "^4.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",

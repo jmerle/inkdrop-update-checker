@@ -4,6 +4,8 @@
 [![Latest release](https://img.shields.io/github/v/release/jmerle/inkdrop-update-checker)](https://my.inkdrop.app/plugins/update-checker)
 [![License](https://img.shields.io/github/license/jmerle/inkdrop-update-checker)](https://github.com/jmerle/inkdrop-update-checker/blob/master/LICENSE)
 
+![](https://i.imgur.com/ALeKGHf.png)
+
 This plugin automatically checks for Inkdrop plugin updates on launch. A notification is shown if there are updates available.
 
 ## Install
