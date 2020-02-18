@@ -24,8 +24,8 @@ async function checkForUpdates(force) {
       return;
     }
 
-    const pluginPrefix = data.length > 1 ? 's' : '';
-    const message = `Run 'ipm update' in a terminal to update ${data.length} outdated plugin${pluginPrefix}.`;
+    const pluginSuffix = data.length > 1 ? 's' : '';
+    const message = `Run 'ipm update' in a terminal to update ${data.length} outdated plugin${pluginSuffix}.`;
     notify('Info', message);
   } catch (err) {
     console.error('Could not check for plugin updates', err);
