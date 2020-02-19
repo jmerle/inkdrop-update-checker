@@ -45,7 +45,7 @@ async function checkForUpdates(force) {
     const namesArr = data.map(item => item.name);
     const firstNames = namesArr.slice(0, -1);
     const lastName = namesArr[namesArr.length - 1];
-    const namesStr = `${firstNames.join(', ')} and ${lastName}`;
+    const namesStr = namesArr.length === 1 ? lastName : `${firstNames.join(', ')} and ${lastName}`;
     const message = `Run 'ipm update' in a terminal to update ${data.length} outdated ${pluginsStr}.`;
     const details = `Outdated ${pluginsStr}: ${namesStr}.`;
     notify('Info', message, details);
