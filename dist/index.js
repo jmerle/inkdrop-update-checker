@@ -12,10 +12,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 let commandListener = null;
 
-function notify(level, message) {
-  inkdrop.notifications[`add${level}`](message, {
+function notify(level, message, details) {
+  const options = {
     dismissable: true
-  });
+  };
+
+  if (typeof details === 'string') {
+    options.detail = details;
+  }
+
+  inkdrop.notifications[`add${level}`](message, options);
 }
 
 async function checkForUpdates(force) {
@@ -35,9 +41,14 @@ async function checkForUpdates(force) {
       return;
     }
 
-    const pluginSuffix = data.length > 1 ? 's' : '';
-    const message = `Run 'ipm update' in a terminal to update ${data.length} outdated plugin${pluginSuffix}.`;
-    notify('Info', message);
+    const pluginsStr = `plugin${data.length > 1 ? 's' : ''}`;
+    const namesArr = data.map(item => item.name);
+    const firstNames = namesArr.slice(0, -1);
+    const lastName = namesArr[namesArr.length - 1];
+    const namesStr = `${firstNames.join(', ')} and ${lastName}`;
+    const message = `Run 'ipm update' in a terminal to update ${data.length} outdated ${pluginsStr}.`;
+    const details = `Outdated ${pluginsStr}: ${namesStr}.`;
+    notify('Info', message, details);
   } catch (err) {
     console.error('Could not check for plugin updates', err);
 
