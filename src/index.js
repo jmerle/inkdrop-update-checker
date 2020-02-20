@@ -1,3 +1,5 @@
+'use babel';
+
 import execa from 'execa';
 
 let commandListener = null;

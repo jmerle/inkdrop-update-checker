@@ -4,19 +4,17 @@
   "description": "Automatically check for Inkdrop plugin updates",
   "repository": "https://github.com/jmerle/inkdrop-update-checker",
   "license": "MIT",
-  "main": "./dist/index",
+  "main": "./src/index",
   "scripts": {
-    "build": "babel --verbose --source-maps --out-dir dist/ src/",
-    "dev": "yarn build --watch",
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint --format codeframe 'src/**'",
     "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.{less,yml,json}'",
     "fix": "yarn fix:eslint && yarn fix:prettier",
     "fix:eslint": "yarn lint:eslint --fix",
-    "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{less,yml,json}'",
-    "release": "rimraf dist/ && yarn build && ipm publish"
+    "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{less,yml,json}'"
   },
   "dependencies": {
+    "core-js": "2.x",
     "execa": "^4.0.0"
   },
   "devDependencies": {
