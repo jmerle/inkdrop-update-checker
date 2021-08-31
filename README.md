@@ -1,6 +1,6 @@
 # Update Checker plugin for Inkdrop
 
-[![Build Status](https://github.com/jmerle/inkdrop-update-checker/workflows/Build/badge.svg)](https://github.com/jmerle/inkdrop-update-checker/actions?query=workflow%3ABuild)
+[![Build status](https://github.com/jmerle/inkdrop-update-checker/workflows/Build/badge.svg)](https://github.com/jmerle/inkdrop-update-checker/actions?query=workflow%3ABuild)
 [![Latest release](https://inkdrop-plugin-badge.vercel.app/api/version/update-checker?style=flat)](https://my.inkdrop.app/plugins/update-checker)
 [![Downloads](https://inkdrop-plugin-badge.vercel.app/api/downloads/update-checker?style=flat)](https://my.inkdrop.app/plugins/update-checker)
 [![License](https://img.shields.io/github/license/jmerle/inkdrop-update-checker)](https://github.com/jmerle/inkdrop-update-checker/blob/master/LICENSE)
